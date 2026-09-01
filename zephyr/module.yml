@@ -1,0 +1,5 @@
+name: softdevice_controller
+build:
+  cmake: zephyr
+  depends:
+    - mpsl
