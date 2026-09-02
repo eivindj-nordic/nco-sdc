@@ -36,18 +36,15 @@ set(valid_sdc_variants
 )
 
 if(NOT DEFINED SDC_SOC)
-  set(SDC_SOC "nrf54l" CACHE STRING "SoftDevice Controller library SoC variant")
-  set_property(CACHE SDC_SOC PROPERTY STRINGS ${valid_socs})
+  message(FATAL_ERROR "SDC_SOC is not set.")
 endif()
 
 if(NOT DEFINED SDC_FLOAT_TYPE)
-  set(SDC_FLOAT_TYPE "hard-float" CACHE STRING "SoftDevice Controller library float type")
-  set_property(CACHE SDC_FLOAT_TYPE PROPERTY STRINGS ${valid_float_types})
+  message(FATAL_ERROR "SDC_FLOAT_TYPE is not set.")
 endif()
 
 if(NOT DEFINED SDC_VARIANT)
-  set(SDC_VARIANT "multirole" CACHE STRING "SoftDevice Controller library role")
-  set_property(CACHE SDC_VARIANT PROPERTY STRINGS ${valid_sdc_variants})
+  message(FATAL_ERROR "SDC_VARIANT is not set.")
 endif()
 
 if(NOT DEFINED SDC_HEADERS_INCLUDE)
